@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 20px 50px;
+  min-height: 100vh;
+  font-family: sans-serif;
+  position: relative;
+}
+
+header {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.header__logo {
+  width: 120px;
+}
+
+.header__logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.header__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  border-radius: 5px;
+  width: 100px;
+  height: 80px;
+}
+
+.header__score-title {
+  font-size: 0.7rem;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+  color: hsl(229, 64%, 46%);
+}
+
+.header__score-number {
+  font-weight: 800;
+  color: hsl(229, 25%, 31%);
+  font-size: 2.4rem;
+}
+
+.rules-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.759);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.rules-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.rules-card {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.rules-card__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rules-card__header img {
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.rules-card__image-helper {
+  margin-top: 20px;
+}
+
+.rules-card__image-helper img {
+  object-fit: contain;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: none;
+}
+
+.game-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 100px;
+  padding: 20px;
+  gap: 30px;
+}
+
+.game__user,
+.game__computer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.game__user h3,
+.game__computer h3 {
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  top: -50px;
+}
+
+#userContainer,
+#computerContainer {
+  width: 140px;
+  height: 140px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 1px 7px 2px rgb(186, 186, 186);
+}
+
+.game__result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0px 20px;
+}
+
+.game__result {
+  color: #fff;
+  font-weight: 700;
+}
+
+.game-playagain__button {
+  padding: 10px 0px;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: rgb(252, 0, 0);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+.game__option--paper {
+  border: 15px solid rgb(67, 67, 255);
+}
+
+.game__option--rock {
+  border: 15px solid rgb(255, 73, 73);
+}
+
+.game__option--scissors {
+  border: 15px solid rgb(255, 190, 70);
+}
+
+@media (max-width: 694px) {
+  body {
+    padding: 10px 20px;
+  }
+
+  .header__logo {
+    width: 80px;
+  }
+
+  .header__score {
+    width: 80px;
+    height: 60px;
+  }
+
+  .header__score-title {
+    font-size: 0.5rem;
+    letter-spacing: 1.4px;
+  }
+
+  .header__score-number {
+    font-size: 2rem;
+  }
+
+  .rules-button {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    letter-spacing: 1.5px;
+  }
+
+  #userContainer,
+  #computerContainer {
+    width: 120px;
+    height: 120px;
+  }
+
+  .game__result-container {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 533px) {
+  .game-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .game__user h3,
+  .game__computer h3 {
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+    top: -15px;
+  }
+
+  .game__result-container {
+    margin: 15px 0px;
+  }
+}

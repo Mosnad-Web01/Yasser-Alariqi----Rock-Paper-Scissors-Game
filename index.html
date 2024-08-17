@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="header__logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <div class="header__score">
+        <h2 class="header__score-title">SCORE</h2>
+        <h1 id="scroe" class="header__score-number">0</h1>
+      </div>
+    </header>
+
+  
+    <section class="game">
+      <div class="game__area">
+          <div id="paper" class="game__option game__option--paper" data-user-select="paper">
+              <img src="./images/icon-paper.svg" alt="Paper" />
+          </div>
+          <div id="rock" class="game__option game__option--rock" data-user-select="rock">
+              <img src="./images/icon-rock.svg" alt="Rock" />
+          </div>
+          <div id="scissors" class="game__option game__option--scissors" data-user-select="scissors">
+              <img src="./images/icon-scissors.svg" alt="Scissors" />
+          </div>
+      </div>
+  </section>
+  
+
+
+
+  <button class="rules-button" id="rulesButton">Rules</button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <article class="rules-card" id="rulesCard">
+    <div class="rules-card__header">
+      <h2 class="rules-card__heaer-title">RULES</h2>
+      <img id="closeRuleWindowBtn" src="./images/icon-close.svg" alt="">
+    </div>
+    <div class="rules-card__image-helper">
+      <img src="./images/image-rules.svg" alt="">
+    </div>
+  </article>
+
+
+    <script src="script.js"></script>
+    <script src="overlay.js"></script>
+
+  </body>
+</html>

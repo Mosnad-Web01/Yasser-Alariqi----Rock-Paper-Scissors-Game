@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="resultStyle.css">
+    <title>Game Result</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <div class="header__score">
+        <h2 class="header__score-title">SCORE</h2>
+        <h1 id="scoreResult" class="header__score-number">0</h1>
+      </div>
+    </header>
+
+
+
+
+        <div class="game-container">
+            <div id="userMainContainer" class="game__user">
+              <h3>YOU PICKED</h3>
+              <div id="userContainer">
+
+              </div>
+            </div>
+
+            <div class="game__result-container">
+              <h1 id="whoIsTheWiner" class="game__result"></h1>
+              <button id="playAgain" class="game-playagain__button">Play Again</button>
+            </div>
+
+
+            <div id="computerMainContainer" class="game__computer">
+              <h3>THE HOUSE PICKED</h3>
+
+              <div id="computerContainer">
+
+              </div>
+            </div>
+        </div>
+
+
+
+        
+  <button class="rules-button" id="rulesButton">Rules</button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <article class="rules-card" id="rulesCard">
+    <div class="rules-card__header">
+      <h2 class="rules-card__heaer-title">RULES</h2>
+      <img id="closeRuleWindowBtn" src="./images/icon-close.svg" alt="">
+    </div>
+    <div class="rules-card__image-helper">
+      <img src="./images/image-rules.svg" alt="">
+    </div>
+  </article>
+
+
+
+    <script src="result.js"></script>
+    <script src="script.js"></script>
+    <script src="overlay.js"></script>
+  </body>
+</html>
