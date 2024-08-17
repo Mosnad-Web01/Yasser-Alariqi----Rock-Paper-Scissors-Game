@@ -229,12 +229,13 @@ header {
         font-size: 2rem;
     }
     
-    .rules-button  {
+    .rules-button {
         left: 50%;
         transform: translateX(-50%);
-        bottom: 30px;
-        margin-bottom: 50px;
+        bottom: 10px;
         letter-spacing: 1.5px;
-    }
+        position: absolute;
+      }
+    
     
 }

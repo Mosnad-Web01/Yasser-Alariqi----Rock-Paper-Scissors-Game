@@ -231,8 +231,9 @@ header {
   .rules-button {
     left: 50%;
     transform: translateX(-50%);
-    bottom: 30px;
+    bottom: 10px;
     letter-spacing: 1.5px;
+    position: absolute;
   }
 
   #userContainer,
@@ -250,14 +251,21 @@ header {
 @media (max-width: 533px) {
   .game-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
-  .game__user h3,
-  .game__computer h3 {
+  .game__user h3{
     color: #fff;
     font-weight: 400;
     position: relative;
     top: -15px;
+  }
+  .game__computer {
+    flex-direction: column-reverse;
+  }
+
+  .game__computer h3 {
+    position: relative;
+    top: 20px;
   }
 
   .game__result-container {
